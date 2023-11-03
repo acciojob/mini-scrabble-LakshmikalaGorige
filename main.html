@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <input type="text" id="evaluatedText" oninput="updateLetterCount()">
+  <h3 id="letterCount">0</h3>
 
+  <script>
+    function updateLetterCount() {
+      const inputText = document.getElementById('evaluatedText').value;
+      const letterCount = inputText.length;
+      document.getElementById('letterCount').textContent = letterCount;
+    }
+
+    // Call the updateLetterCount function initially to set the count to 0
+    updateLetterCount();
+  </script>
 </body>
-
 </html>
